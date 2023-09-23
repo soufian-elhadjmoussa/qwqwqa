@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="soufian elhadjmoussa ">
+    <meta name="discription" content="you can check my portfolio web page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="self.css"> -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Soufian</title>
+    <style>
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --main-color:#151515;
+            --pp-color: rgba(0, 0, 0, 0.724);
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "open sans" sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .container{
+            padding-left: 15px;
+            padding-right:15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media(min-width:768px){
+            .container{
+                max-width: 730px;
+            }
+        }
+        @media(min-width:992px){
+            .container{
+                max-width: 970px;
+            }
+        }
+        @media(min-width:1200px){
+            .container{
+                max-width: 1170px;
+            }
+        }
+        
+        /* end global rules */
+        
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 40px 70px;
+        }
+        header .logo{
+            font-size: 23px;
+            text-transform: capitalize;
+            font-weight: 500;
+            color: var(--pp-color);
+            z-index: 100;
+            transition: 0.7s ease;
+        }
+        header .logo.is-active{
+            color: white;
+            position: fixed;
+        }
+        .spa.is-active{
+            color: white;
+        }
+        span{
+            font-weight: bolder;
+            font-size: 45px;
+            color: black;
+            font-family: cursive;
+            transition: 0.7s ease;
+        }
+        header .navbar ul{
+            display: flex;
+            flex-direction: row;
+            padding: 25px;
+        
+        }
+        @media(max-width:768px){
+            header .navbar ul{
+                display: none;
+            }
+        }
+        header .navbar ul li a{
+            padding:10px;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: normal;
+            transition: 0.7s ease;
+            color: var(--pp-color);
+        }
+        
+        header .navbar ul li a:hover{
+            border-bottom: solid 1px var(--main-color);
+            text-shadow: 1px 1px 30px var(--main-color);
+        }
+        header .navbar ul li{
+            margin-left: 15px;
+        }
+        
+        header .navbar .bar{
+            display: block;
+            width: 30px;
+            height: 20px;
+        }
+        header .navbar .bar span{
+            width:100%;
+            height: 2px;
+            background-color: black;
+            margin-top:3px;
+        }
+        
+        /* end header */
+        
+        
+        .container main{
+            margin: 10px auto ;
+            height: 60vh;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+        
+        
+        }
+        @media(max-width:975px){
+            .container main{
+                justify-content: space-between;
+            }
+        }
+        .container main .img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        @media(max-width:768px){
+            .container main {
+                padding: 0 50px;
+            }
+        }
+        @media(max-width:600px){
+            .container main {
+                display:flex;
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            .container main .img{
+                margin-top: 40px;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        .container main .img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+        
+        
+        .container main .info{
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            margin-left: -150px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        @media(max-width:600px){
+            .container main .info {
+                margin: 0 auto;
+            }
+        }
+        .container main .info p:first-child{
+            font-size: 14px;
+            text-transform: capitalize;
+            color: var(--pp-color);
+            margin-top: 28px;
+            margin-bottom: -14px;
+        
+        }
+        
+        
+        .container main .info h1{
+            font-size: 34px;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: black;
+            margin: 17px;
+            margin-bottom: 10px;
+        }
+        
+        .container main .info p{
+            font-size: 27px;
+            margin: 0;
+            font-weight: 500;
+            color:var(--pp-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        
+        main .info button{
+            margin: 20px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border:1px solid var(--main-color);
+            overflow: hidden;
+        }
+        
+        
+        main .info button a{
+            padding: 10px;
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--main-color);
+        }
+        
+        main .info button:hover a{
+            color: white;
+        }
+        main .info button:hover{
+            background-color: var(--pp-color);
+        }
+        
+        main .info .social i{
+            font-size: 25px;
+            margin-left: 15px;
+            transition: 0.7s ease;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+        
+        
+        main .info .social i:hover{
+            transform: scale(1.2);
+        }
+        
+        
+        .humbrger{
+            position: relative;
+            display: block;
+            width: 35px;
+            cursor: pointer;
+            appearance: none;
+            background:none;
+            outline: none;
+            border:none;
+            margin-top: 13px;
+            z-index: 199;
+        }
+        .humbrger .bar{
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background-color: #000000;
+            margin: 6px 0;
+            transition: 0.7s;
+            
+        }
+        .humbrger:hover .bar{
+            width: 100%;
+        }
+        .humbrger:after, .humbrger::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #000000;
+            margin: 6px 0;
+            transition: 01s;
+            z-index: 190;
+            
+        }
+        
+        .humbrger.is-active:before{
+            transform: rotate(-45deg) translate(-9px , 4px);
+            z-index: 190;
+            background-color: white;
+        
+            
+        }
+        .humbrger.is-active::after{
+            transform: rotate(45deg) translate(-9px ,-4px);
+            z-index: 10;
+            background-color: white;
+            
+        }
+        .humbrger.is-active .bar{
+            opacity: 0 ;
+        }
+        
+        
+        @media(min-width:768px){
+            .humbrger{
+                display: none;
+            }
+        }
+        
+        
+        .mobile{
+            background-color: #000000d6;
+            min-height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            z-index: 99;
+            display: block;
+            padding-top: 120px;
+            transition: 0.7s ease;
+        }
+        .mobile.is-active{
+            left: 0;
+        }
+        
+        .mobile ul li a{
+            text-align: center;
+            background-color: rgba(62, 60, 60, 0.737);
+            padding: 12px 16px;
+            display: block;
+            font-size: 20px;
+            text-transform: capitalize;
+            color: rgb(182, 170, 170);
+            transition: 0.7s ease;
+            width: 200px;
+            margin: 0px auto 16px;
+        }
+        .mobile ul li a:hover {
+            transform: scale(1.1);
+            color: rgb(173, 181, 181);
+            background-color: #151515bc;
+        }
+        
+        .title{
+            padding: 10px;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 600;
+            width: fit-content;
+            margin: 20px auto 100px;
+        }
+        
+        .title p{
+            font-size: 14px;
+            color: var(--pp-color);
+        }
+        .title h2{
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        section .container aside{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        
+        section .container aside .img{
+            width: 300px;
+            height: 300px;
+        }
+        section .container aside .img img{
+            width: 100%;
+        }
+        
+        section .container aside .info-about .cards{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid black;
+            height: 60vh;
+            width: 900px;
+        }
+        section .container aside .info-about .cards .card{
+            border: 1px solid black;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header id="home">
+            <div class="logo  "> <span class="spa">S</span>ou fian.</div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#skill">skill</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#project">project</a></li>
+                    <li><a href="#contect">contect</a></li>
+                </ul>
+            </nav>
+            <button class="humbrger">
+                <div class="bar"></div>
+            </button>
+            
+        </header>
+    </div>
+    <nav class="mobile">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#skill">skill</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#project">project</a></li>
+            <li><a href="#contect">contect</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <!-- home -->
+            <div class="img">
+                <img src="photo_2023-09-22_11-30-42.jpg" alt="soufian" title="soufian elhadjmoussa">
+            </div>
+            <div class="info">
+                <p>Hello,I'm</p>
+                <h1><span>S</span>ou fian</h1>
+                <p>Front end developer</p>
+
+                
+                <button> <a href="#contect">contect me</a></button>
+            
+                <div class="social">
+                    <a href="https://www.facebook.com/chinwi.ali.10?mibextid=ZbWKwL"><i  style="color: #000;"class='fab fa-facebook'></i></a>
+                    <a href="https://instagram.com/sifou_ian?igshid=MzMyNGUyNmU2YQ=="><i  style="color: #000;"class='fab fa-instagram'></i></a>
+                    <a href="https://www.linkedin.com/in/soufian-elhadjmoussa-9543b2280"><i  style="color: #000;"class='fab fa-linkedin'></i></a>
+                    <a href="https://wa.me/qr/ORLC3FVV6DQQD1"><i  style="color: #000;"class='fab fa-whatsapp'></i></a>
+                    <i  style="color: #000;"class='fab fa-telegram'></i>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+    <section id="about">
+        <div class="container">
+            <div class="title">
+                <p>get to know more</p>
+                <h2>about me</h2>
+            </div>
+            <aside>
+                <div class="img">
+                    <img src="photo_2023-09-22_11-30-58.jpg" alt="">
+                </div>
+                <div class="info-about">
+                    <div class="cards">
+                        <div class="card">
+                            <i class="fa-brands fa-slack"></i>
+                            <h3>Experience</h3>
+                            <p>2+ years</p>
+                            <p>frontend development</p>
+                        </div>
+                        <div class="card">
+                            <i class="fa-brands fa-slack"></i>
+                            <h3>education</h3>
+                            <p>b.sc. bochelors degree</p>
+                            <p>M.sc. Master degree</p>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, fuga reprehenderit! Dolores ullam tenetur optio exercitationem soluta ipsum omnis pariatur suscipit aspernatur non, ducimus necessitatibus explicabo perferendis repellendus qui magnam.
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+  <script>
+      
+    const munu_btn = document.querySelector('.humbrger ');
+    const mobile_menu = document.querySelector('.mobile ');
+    const logo_menu = document.querySelector('.logo ');
+    const spa = document.querySelector('.spa ');
+    munu_btn.addEventListener('click', function() 
+    {
+        munu_btn.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active');
+        logo_menu.classList.toggle('is-active');
+        spa.classList.toggle('is-active');
+    });
+
+
+  </script>
+</body>
+</html>
